@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/> 
+    <title>Hello World</title>
+    <style>
+      body {
+        width: 80%;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <p></p>
+
+  <script>
+    // rewrite the _parameter list_ of this function to have the greeting appear in the h1 element
+    function greetInPage (name, tagName) {
+      let element = document.querySelector(tagName);
+      let greeting = 'Good morning, ' + name + '. How are you today?';
+      element.innerText = greeting;
+    }
+    greetInPage('Ms Potts', 'p');
+  </script>
+  </body>
+
+</html>

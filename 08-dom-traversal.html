@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/> 
+    <title>Hello World</title>
+    <style>
+      body {
+        width: 80%;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    
+    <div class="example">
+      <p>meaningless text</p>
+    </div>
+  <script>
+    // rewrite findParent to log the parent of the body element
+    function findParent (tagName) {
+      let element = document.querySelector(tagName);
+      let parent = element.parentElement;
+      console.log('the parent of ', element, ' is ', parent);
+    }
+    findParent('p')
+  </script>
+  </body>
+
+</html>

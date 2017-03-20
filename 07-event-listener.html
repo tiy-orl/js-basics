@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/> 
+    <title>Hello World</title>
+    <style>
+      body {
+        width: 80%;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <p></p>
+
+    <button>Click for greeting</button>
+  <script>
+    // rewrite greetInPage to remove the text from the button when the button is clicked
+    function greetInPage () {
+      let element = document.querySelector('p');
+      let greeting = 'Good morning, Colonel Fury. How are you today?';
+      element.innerText = greeting;
+    }
+    
+    let button = document.querySelector('button');
+    button.addEventListener('click', greetInPage);
+  </script>
+  </body>
+
+</html>
