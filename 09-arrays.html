@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/> 
+    <title>Hello World</title>
+    <style>
+      body {
+        width: 80%;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Arrays</h1>
+    
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  <script>
+    function addArrayToPage () {
+      let list = document.querySelector('ul');
+      let lis = list.querySelectorAll('li');
+      for (let i = 0; i < 3; i++) {
+        let li = lis[i];
+        li.textContent = i;
+      } 
+    }
+    addArrayToPage();
+  </script>
+  </body>
+
+</html>
