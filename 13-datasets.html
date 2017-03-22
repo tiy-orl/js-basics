@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/> 
+    <title>Datasets</title>
+    <style>
+      body {
+        width: 80%;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Storing Data on HTML Elements</h1>
+    <section>
+      <h2>Buttons</h2>
+      <ul>
+        <li><button data-name="Michael Jordan" data-sport="basketball">Button #1</button></li>
+        <li><button data-name="Markku Uusipaavalniemi" data-sport="curling">Button #2</button></li>
+        <li><button data-name="Tom Brady" data-sport="football">Button #3</button></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Result</h2>
+      <p>Clicked button for <span class="name"></span>, who competes in <span class="sport"></span></p>
+    </section>
+
+  <script>
+    function showInformation (event) {
+      let button = event.target;
+      let whereTheNameGoes = document.querySelector('.name');
+      whereTheNameGoes.textContent = button.dataset.name;
+      let whereTheSportGoes = document.querySelector('.sport');
+      whereTheSportGoes.textContent = button.dataset.sport;
+
+    }
+    let buttons = document.querySelectorAll('button');
+    for (let i = 0; i < buttons.length; i++) {
+      let button = buttons[i];
+      button.addEventListener('click', showInformation);
+    }
+  </script>
+  </body>
+
+</html>
